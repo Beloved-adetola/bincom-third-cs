@@ -1,0 +1,27 @@
+@model IEnumerable<MVC_Portfolio.Models.GalleryImage>
+
+<h2>Gallery</h2>
+
+<a asp-action="Upload">
+    Upload New Image
+</a>
+
+<hr />
+
+<div style="display:flex; flex-wrap:wrap; gap:20px;">
+
+@foreach(var image in Model)
+{
+    <div style="width:250px;">
+
+        <img src="@image.ImagePath"
+             width="100%"
+             height="200"
+             style="object-fit:cover;" />
+
+        <p>@image.FileName</p>
+
+    </div>
+}
+
+</div>

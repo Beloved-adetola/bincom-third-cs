@@ -1,0 +1,15 @@
+<div class="container section">
+    <h2>Tax Calculator</h2>
+
+    <div data-aos="fade-up" class="glass p-5 mt-4 text-center">
+        <form method="post">
+            <input class="form-control mb-3" type="number" name="income" placeholder="Enter annual income (₦)" />
+            <button class="btn btn-primary">Calculate</button>
+        </form>
+
+        @if (ViewBag.Tax != null)
+        {
+            <h3 class="mt-4">Tax: ₦@ViewBag.Tax</h3>
+        }
+    </div>
+</div>
